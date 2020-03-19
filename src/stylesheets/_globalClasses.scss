@@ -24,8 +24,10 @@ $white: rgb(255, 255, 255);
   background-color: $greyLine;
 }
 .cellBorder {
-  border-left: 10px solid $violet;
+  border-left: 10px solid;
   border-radius: 5px;
+  border-image-source: linear-gradient($violet, $blue);
+  border-image-slice: 1;
   box-shadow: 10px 10px 25px 0 $grey;
 }
 .innerCellStyle {
