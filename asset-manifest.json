@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/treeCellApp/static/css/main.882d4787.chunk.css",
+    "main.js": "/treeCellApp/static/js/main.a31916a1.chunk.js",
+    "main.js.map": "/treeCellApp/static/js/main.a31916a1.chunk.js.map",
+    "runtime-main.js": "/treeCellApp/static/js/runtime-main.d8684e0e.js",
+    "runtime-main.js.map": "/treeCellApp/static/js/runtime-main.d8684e0e.js.map",
+    "static/js/2.598aded1.chunk.js": "/treeCellApp/static/js/2.598aded1.chunk.js",
+    "static/js/2.598aded1.chunk.js.map": "/treeCellApp/static/js/2.598aded1.chunk.js.map",
+    "index.html": "/treeCellApp/index.html",
+    "precache-manifest.ce9292f8118f567a45f6089310f61430.js": "/treeCellApp/precache-manifest.ce9292f8118f567a45f6089310f61430.js",
+    "service-worker.js": "/treeCellApp/service-worker.js",
+    "static/css/main.882d4787.chunk.css.map": "/treeCellApp/static/css/main.882d4787.chunk.css.map",
+    "static/js/2.598aded1.chunk.js.LICENSE.txt": "/treeCellApp/static/js/2.598aded1.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d8684e0e.js",
+    "static/js/2.598aded1.chunk.js",
+    "static/css/main.882d4787.chunk.css",
+    "static/js/main.a31916a1.chunk.js"
+  ]
+}
