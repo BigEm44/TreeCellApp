@@ -1,24 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import SmallCellFirst from './components/SmallCellFirst';
+import SmallCell from './components/SmallCell';
+import LargeCell from './components/LargeCell';
+import ModalTrigger from './components/ModalTrigger';
+import CellContextProvider from './context/CellContext';
+import ModalContextProvider from './context/ModalContext';
+import LargeInnerContextProvider from './context/LargeInnerContext';
+import './stylesheets/index.scss';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ModalContextProvider>
+        <CellContextProvider>
+          <LargeInnerContextProvider>
+            <div className="wrapper">
+              <h2>People</h2>
+              <SmallCellFirst />
+              <LargeCell />
+              <SmallCell />
+              <ModalTrigger />
+            </div>
+          </LargeInnerContextProvider>
+        </CellContextProvider>
+      </ModalContextProvider>
     </div>
   );
 }

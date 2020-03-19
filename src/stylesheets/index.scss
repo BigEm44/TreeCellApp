@@ -1,0 +1,20 @@
+@import './globalClasses';
+@import './app';
+@import './smallCellFirst';
+@import './smallCell';
+@import './smallCellDetails';
+@import './largeCell';
+@import './largeInnerCellDetail';
+@import './modal';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bodyBackground;
+  font-size: 10px;
+  font-family: 'Roboto', sans-serif;
+}

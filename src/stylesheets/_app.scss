@@ -1,0 +1,25 @@
+.App {
+  display: flex;
+  justify-content: center;
+  width: 800px;
+  min-height: 95vh;
+  margin: 0 auto;
+  background-color: $white;
+  margin-top: 20px;
+  .wrapper {
+    padding-top: 20px;
+    h2 {
+      width: 200px;
+      padding: 15px;
+      border-radius: 5px;
+      text-align: center;
+      background-image: linear-gradient($violet, $blue);
+      color: $white;
+      font-size: 1.6rem;
+    }
+    ul {
+      margin-left: 50px;
+      list-style: none;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.largeInnerCellDetail {
+  display: flex;
+  align-items: center;
+  .lineText {
+    width: 50px;
+  }
+  .lineVertical {
+    height: 100px;
+  }
+  .lineHorizontal {
+    width: 50px;
+  }
+  .innerCellStyle {
+    display: flex;
+    justify-content: space-between;
+  }
+}
