@@ -15,7 +15,7 @@ function App() {
         <CellContextProvider>
           <LargeInnerContextProvider>
             <div className="wrapper">
-              <h2>People</h2>
+              <h2>Animals</h2>
               <SmallCellFirst />
               <LargeCell />
               <SmallCell />
