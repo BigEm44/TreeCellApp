@@ -6,8 +6,8 @@ import { LargeInnerContext } from '../context/LargeInnerContext';
 
 const ModalForm = () => {
   const [title, setTitle] = useState('');
-  const { addCell } = useContext(CellContext);
-  const { addInnerCell } = useContext(LargeInnerContext);
+  const { dispatch } = useContext(CellContext);
+  const { dispatchLarge } = useContext(LargeInnerContext);
   const {
     closeModal,
     largeInnerCellModal,
@@ -16,14 +16,14 @@ const ModalForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    addCell(title);
+    dispatch({ type: 'ADD_CELL', cell: { title } });
     setTitle('');
     closeModal(largeInnerCellModalisClose());
   };
 
   const handleInnerSubmit = e => {
     e.preventDefault();
-    addInnerCell(title);
+    dispatchLarge({ type: 'ADD_INNERCELL', innerCell: { title } });
     setTitle('');
     closeModal(largeInnerCellModalisClose());
   };

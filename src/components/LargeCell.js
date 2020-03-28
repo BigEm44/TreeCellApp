@@ -5,7 +5,7 @@ import { LargeInnerContext } from '../context/LargeInnerContext';
 import { ModalContext } from '../context/ModalContext';
 
 const LargeCell = () => {
-  const { innerCells, removeAllInnerCells } = useContext(LargeInnerContext);
+  const { innerCells, dispatchLarge } = useContext(LargeInnerContext);
   const { openModal, largeInnerCellModalisOpen } = useContext(ModalContext);
   return (
     <div className="largeCell">
@@ -15,7 +15,7 @@ const LargeCell = () => {
       <div className="cellBorder">
         <div
           className="removeButton deleteAllButton"
-          onClick={() => removeAllInnerCells()}
+          onClick={() => dispatchLarge({ type: 'REMOVE_ALLINNERCELLS' })}
         >
           -
         </div>

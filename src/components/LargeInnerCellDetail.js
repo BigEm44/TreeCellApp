@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { LargeInnerContext } from '../context/LargeInnerContext';
 
 const LargeInnerCellDetail = ({ innerCell }) => {
-  const { removeInnerCell } = useContext(LargeInnerContext);
+  const { dispatchLarge } = useContext(LargeInnerContext);
   return (
     <div className="largeInnerCellDetail">
       <div className="lineVertical" />
@@ -11,7 +11,9 @@ const LargeInnerCellDetail = ({ innerCell }) => {
         <div className="cellContent">{innerCell.innerTitle}</div>
         <div
           className="removeButton"
-          onClick={() => removeInnerCell(innerCell.id)}
+          onClick={() =>
+            dispatchLarge({ type: 'REMOVE_INNERCELL', id: innerCell.id })
+          }
         >
           -
         </div>

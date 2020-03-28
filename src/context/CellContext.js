@@ -1,23 +1,14 @@
-import React, { createContext, useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import React, { createContext, useReducer } from 'react';
+import { cellReducer } from '../reducers/cellReducer';
 
 export const CellContext = createContext();
 
 const CellContextProvider = props => {
-  const [cells, setCells] = useState([
+  const [cells, dispatch] = useReducer(cellReducer, [
     { title: 'Income yearly 45k USD+', id: 2 }
   ]);
-  const addFirstCell = () => {
-    setCells(cells[0]);
-  };
-  const addCell = title => {
-    setCells([...cells, { title, id: uuidv4() }]);
-  };
-  const removeCell = id => {
-    setCells(cells.filter(cell => cell.id !== id));
-  };
   return (
-    <CellContext.Provider value={{ cells, addCell, removeCell, addFirstCell }}>
+    <CellContext.Provider value={{ cells, dispatch }}>
       {props.children}
     </CellContext.Provider>
   );

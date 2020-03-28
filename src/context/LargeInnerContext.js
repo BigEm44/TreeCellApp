@@ -1,27 +1,16 @@
-import React, { createContext, useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import React, { createContext, useReducer } from 'react';
+import { largeInnerReducer } from '../reducers/largeInnerReducer';
 
 export const LargeInnerContext = createContext();
 
 const LargeInnerContextProvider = props => {
-  const [innerCells, setInnerCells] = useState([
+  const [innerCells, dispatchLarge] = useReducer(largeInnerReducer, [
     { innerTitle: 'Ethnicity', id: 1 },
     { innerTitle: 'Black', id: 2 },
     { innerTitle: 'Hispanic', id: 3 }
   ]);
-  const addInnerCell = innerTitle => {
-    setInnerCells([...innerCells, { innerTitle, id: uuidv4() }]);
-  };
-  const removeInnerCell = id => {
-    setInnerCells(innerCells.filter(innerCell => innerCell.id !== id));
-  };
-  const removeAllInnerCells = () => {
-    setInnerCells(innerCells.splice(0, 0));
-  };
   return (
-    <LargeInnerContext.Provider
-      value={{ innerCells, addInnerCell, removeInnerCell, removeAllInnerCells }}
-    >
+    <LargeInnerContext.Provider value={{ innerCells, dispatchLarge }}>
       {props.children}
     </LargeInnerContext.Provider>
   );

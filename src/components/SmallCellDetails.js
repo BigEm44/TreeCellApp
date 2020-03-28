@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { CellContext } from '../context/CellContext';
 
 const SmallCellDetail = ({ cell }) => {
-  const { removeCell } = useContext(CellContext);
+  const { dispatch } = useContext(CellContext);
   return (
     <div className="smallCellDetail">
       <p className="lineText">And</p>
@@ -10,7 +10,10 @@ const SmallCellDetail = ({ cell }) => {
       <div className="lineHorizontal"></div>
       <div className=" cell cellBorder">
         <div className=" title">{cell.title}</div>
-        <div className="removeButton" onClick={() => removeCell(cell.id)}>
+        <div
+          className="removeButton"
+          onClick={() => dispatch({ type: 'REMOVE_CELL', id: cell.id })}
+        >
           -
         </div>
       </div>
