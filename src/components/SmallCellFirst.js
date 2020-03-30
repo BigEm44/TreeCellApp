@@ -9,7 +9,7 @@ const SmallCellFirst = () => {
       <div className="lineVertical"></div>
       <div className="lineHorizontal"></div>
       <div className=" cell cellBorder">
-        <div className="title">Reptile</div>
+        <div className="title">Reptiles</div>
         <div className="removeButton" onClick={() => removeCell()}>
           -
         </div>
