@@ -6,8 +6,6 @@ export const largeInnerReducer = (state, action) => {
       return [...state, { innerTitle: action.innerCell.title, id: uuidv4() }];
     case 'REMOVE_INNERCELL':
       return state.filter(innerCell => innerCell.id !== action.id);
-    case 'REMOVE_ALLINNERCELLS':
-      return state.splice(0, 0);
     default:
       return state;
   }
